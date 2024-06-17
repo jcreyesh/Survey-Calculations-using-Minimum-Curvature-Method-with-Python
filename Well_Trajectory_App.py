@@ -9,10 +9,11 @@ import altair as alt
 
 # Sidebar
 sl.title("Wellbore Trajectory Computation - Minimum Curvature Method")
-sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \n data measure depth(md), inclination(°),\
-azimuth(°) & the Vertical Section plane(°). The App computes column such as TVD, Northing, Easting, Vertical Section & DLS. Displays the Vs,\
+sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \ndata measure depth(md), inclination(°),\
+azimuth(°) & the Vertical Section plane(°).\nThe App computes columns such as TVD, Northing, Easting, Vertical Section & DLS. Displays the Vs,\
 Northing vs Easting, inclination & DLS plots, as well as the 3D plot. Finally, you can retrieve the complete trajectory as a csv file by using the \
 Download button.")
+
 sl.divider()
 
 file = sl.file_uploader("Load the file")
