@@ -120,6 +120,8 @@ ax4.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 plt.tight_layout()
 sl.pyplot(fig)
 
+sl.subheader("3D-Plot")
+
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
 fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
