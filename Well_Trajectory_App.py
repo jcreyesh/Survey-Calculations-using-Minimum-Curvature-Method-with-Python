@@ -87,7 +87,7 @@ plt.rcParams['axes.axisbelow'] = True
 # Axes_1: Vertical-Section
 ax1 = plt.subplot2grid(shape=(3,2), loc=(0,0), rowspan=3)
 ax1.plot(df['VSEC'], df['TVD'], color='blue')
-# ax1.set_ylim(5000, 0)
+ax1.set_ylim(max(df["TVD"]), 0)
 # ax1.set_xlim(-600, 600)
 ax1.set_xlabel(f'Vs (m) @ {Vs_plane}°',weight='bold', labelpad=8)
 ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
