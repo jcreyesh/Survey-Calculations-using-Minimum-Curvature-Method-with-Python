@@ -130,6 +130,6 @@ fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7,
 xaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
 yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)',),
 zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
-fig.update_layout(width=800, height=800)
+fig.update_layout(width=1600, height=1600)
 fig.show()
 sl.plotly_chart(fig)
