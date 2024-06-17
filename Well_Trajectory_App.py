@@ -152,7 +152,7 @@ sl.subheader("Final Trajectory")
 # Exporting the dataframe
 sl.write(df)
 
-sl.divider()
+# sl.divider()
 # Rounding the dataframe to 4 decimals
 df = df.apply(lambda col: round(col, 4))
               
