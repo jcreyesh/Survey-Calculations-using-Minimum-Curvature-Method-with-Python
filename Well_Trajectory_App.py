@@ -128,7 +128,6 @@ plt.tight_layout()
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
-sl.divider()
 
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
@@ -149,7 +148,6 @@ sl.plotly_chart(fig)
 # displaying the 4 precision numbers
 pd.set_option("display.precision", 2)
 
-sl.divider()
 sl.subheader("Final Trajectory")
 # Exporting the dataframe
 sl.write(df)
