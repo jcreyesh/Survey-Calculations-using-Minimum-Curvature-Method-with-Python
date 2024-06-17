@@ -21,10 +21,10 @@ if file is not None:
     df = pd.read_csv(file)
     sl.write(df)
 
-cols = sl.columns[1, 1]
-with cols[0]: 
+col1, col2 = sl.columns[1, 1]
+with col1: 
     Well = sl.text_input("Well:")
-with cols[1]:
+with col2:
     Vs_plane = sl.number_input("Vertical Section plane:")
 
 # Empty containers
