@@ -20,9 +20,12 @@ file = sl.file_uploader("Load the file")
 if file is not None:
     df = pd.read_csv(file)
     sl.write(df)
-# sl.divider()
-Vs_plane = sl.number_input("Type the Vertical Section plane:")
-# sl.divider()
+
+cols = sl.columns[1, 1]
+with cols[0]: 
+    Well = sl.text_input("Well:")
+with cols[1]:
+    Vs_plane = sl.number_input("Vertical Section plane:")
 
 # Empty containers
 DLS, TVD, NS, EW, Vs = np.array([0]), np.array([0]), np.array([0]), np.array([0]), np.array([0])
@@ -123,8 +126,8 @@ ax4.plot(df['MD'],df['DLS'],color='blue')
 ax4.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
 ax4.set_ylabel('DLS (°/30 m)',weight='bold',labelpad=8)
 ax4.grid(c=(0.85,0.85,0.85), linestyle='dashed')
-
 plt.tight_layout()
+# fig.title(Well)
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
