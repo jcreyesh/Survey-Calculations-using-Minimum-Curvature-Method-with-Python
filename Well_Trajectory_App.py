@@ -138,17 +138,21 @@ fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 sl.plotly_chart(fig)
 
 # displaying the 4 precision numbers
-pd.set_option("display.precision", 4)
+pd.set_option("display.precision", 2)
 
 sl.subheader("Trayectoria")
 # Exporting the dataframe
 sl.write(df)
-@sl.cache
 
+# Rounding the dataframe to 4 decimals
+df = df.apply(lambda col: round(col, 4)
+              
+# Download Button
+@sl.cache
 def convert_csv(df):
     return df.to_csv().encode("utf-8")
 
 csv = convert_csv(df)
-sl.download_button(label="Download CSV", data=csv, file_name="Trayetoria.csv", mime="text/csv")
+sl.download_button(label="Download CSV", data=csv, file_name="Trajectory.csv", mime="text/csv")
 
 
