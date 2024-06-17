@@ -8,7 +8,9 @@ from numpy import sin, cos, tan, arccos, arctan, deg2rad, rad2deg, sqrt
 import altair as alt
 
 # Sidebar
-sl.title("Wellbore Trajectory")
+sl.title("Wellbore Trajectory Computations - Minimum Curvature Method")
+sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input data measure depth(md), inclination(°),
+azimuth(°) & the Vertical Section plane(°). The App computes column such as...")
 sl.divider()
 
 file = sl.file_uploader("Load the file")
