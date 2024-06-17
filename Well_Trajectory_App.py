@@ -138,6 +138,6 @@ fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 sl.plotly_chart(fig)
 
 # Exporting the dataframe
-sl.write(df)
+sl.download_button("Download CSV", df)
 
 
