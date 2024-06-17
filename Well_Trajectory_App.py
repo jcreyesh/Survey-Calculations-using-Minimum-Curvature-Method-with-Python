@@ -137,6 +137,9 @@ fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 # fig.show()
 sl.plotly_chart(fig)
 
+# displaying the 4 precision numbers
+pd.set_option("display.precision", 4)
+
 sl.subheader("Trayectoria")
 # Exporting the dataframe
 sl.write(df)
