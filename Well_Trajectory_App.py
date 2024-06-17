@@ -9,6 +9,7 @@ import altair as alt
 
 # Sidebar
 sl.title("Wellbore Trajectory")
+sl.divider()
 
 file = sl.file_uploader("Load the file")
 if file is not None:
