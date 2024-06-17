@@ -1,2 +1,3 @@
 plotly.express
 plotly
+matplotlib
