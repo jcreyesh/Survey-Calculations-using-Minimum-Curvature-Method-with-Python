@@ -127,7 +127,7 @@ ax4.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
 ax4.set_ylabel('DLS (°/30 m)',weight='bold',labelpad=8)
 ax4.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 plt.tight_layout()
-fig.suptitle(Well, fontweight="bold", y=1)
+fig.suptitle(Well, fontweight="bold", y=1.02)
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
@@ -135,8 +135,7 @@ sl.subheader("3D-Plot")
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
 fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
-range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0],)
-#range_x=[-200,600],range_y=[-600,300],range_z=[5000,0],)
+range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0], title=Well)
 
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
@@ -145,7 +144,7 @@ yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor
 zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
 fig.update_layout(width=400, height=600)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
-# fig.show()
+
 sl.plotly_chart(fig)
 
 # displaying the 4 precision numbers
