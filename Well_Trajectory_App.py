@@ -145,7 +145,7 @@ sl.subheader("Trayectoria")
 sl.write(df)
 
 # Rounding the dataframe to 4 decimals
-df = df.apply(lambda col: round(col, 4)
+df = df.apply(lambda col: round(col, 4))
               
 # Download Button
 @sl.cache
