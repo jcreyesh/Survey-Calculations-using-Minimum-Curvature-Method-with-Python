@@ -139,7 +139,8 @@ sl.plotly_chart(fig)
 
 sl.subheader("Trayectoria")
 # Exporting the dataframe
-sl.write(df)
-#sl.download_button(label="Download CSV", data=df)
+#sl.write(df)
+datos = df.to_csv(df)
+sl.download_button(label="Download CSV", data=datos, file_name="Trayetoria.csv", mime="text/csv")
 
 
