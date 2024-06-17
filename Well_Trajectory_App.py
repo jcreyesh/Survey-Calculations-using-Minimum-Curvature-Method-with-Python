@@ -8,7 +8,7 @@ from numpy import sin, cos, tan, arccos, arctan, deg2rad, rad2deg, sqrt
 import altair as alt
 
 # Sidebar
-sl.title("Wellbore Trajectory Computation - Minimum Curvature Method")
+sl.title("Well Trajectory Calculations App - Minimum Curvature Method")
 sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \ndata measure depth(md), inclination(°),\
 azimuth(°) & the Vertical Section plane(°).\nThe App computes columns such as TVD, Northing, Easting, Vertical Section & DLS.\nDisplays the Vs,\
 Northing vs Easting, inclination & DLS plots, as well as the 3D plot.\nFinally, you can retrieve the complete trajectory as a csv file by clicking\n\
@@ -164,6 +164,6 @@ def convert_csv(df):
     return df.to_csv(index=False).encode("utf-8")
 
 csv = convert_csv(df)
-sl.download_button(label="Download CSV", data=csv, file_name=f"Trajectory_" + {Well} + ".csv", mime="text/csv")
+sl.download_button(label="Download CSV", data=csv, file_name=f"{Well} + ".csv", mime="text/csv")
 
 
