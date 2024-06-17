@@ -9,7 +9,7 @@ import altair as alt
 
 # Sidebar
 sl.title("Wellbore Trajectory Computations - Minimum Curvature Method")
-sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input data measure depth(md), inclination(°),
+sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input data measure depth(md), inclination(°),\
 azimuth(°) & the Vertical Section plane(°). The App computes column such as...")
 sl.divider()
 
