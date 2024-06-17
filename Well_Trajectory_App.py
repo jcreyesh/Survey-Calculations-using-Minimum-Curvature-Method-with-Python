@@ -122,7 +122,7 @@ sl.pyplot(fig)
 
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
-fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},title='Well-47',
+fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
 range_x=[-200,600],range_y=[-600,300],range_z=[5000,0],)
 
 fig.update_traces(line={'width':4,'color':'blue'})
