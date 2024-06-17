@@ -133,5 +133,6 @@ xaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor
 yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)',),
 zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
 fig.update_layout(width=600, height=900)
-fig.show()
+fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
+# fig.show()
 sl.plotly_chart(fig)
