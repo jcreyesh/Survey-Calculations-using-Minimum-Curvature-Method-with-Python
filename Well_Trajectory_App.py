@@ -127,7 +127,7 @@ ax4.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
 ax4.set_ylabel('DLS (°/30 m)',weight='bold',labelpad=8)
 ax4.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 plt.tight_layout()
-fig.suptitle(Well, fontweight="bold", y=0.5)
+fig.suptitle(Well, fontweight="bold", y=1)
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
