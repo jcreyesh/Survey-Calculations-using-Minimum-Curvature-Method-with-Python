@@ -150,7 +150,7 @@ df = df.apply(lambda col: round(col, 4))
 # Download Button
 @sl.cache
 def convert_csv(df):
-    return df.to_csv().encode("utf-8")
+    return df.to_csv(index=False).encode("utf-8")
 
 csv = convert_csv(df)
 sl.download_button(label="Download CSV", data=csv, file_name="Trajectory.csv", mime="text/csv")
