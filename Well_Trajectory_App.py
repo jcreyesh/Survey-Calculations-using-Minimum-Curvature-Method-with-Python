@@ -21,7 +21,7 @@ if file is not None:
     df = pd.read_csv(file)
     sl.write(df)
 
-col1, col2 = sl.columns[1, 1]
+col1, col2 = sl.columns([1, 1])
 with col1: 
     Well = sl.text_input("Well:")
 with col2:
