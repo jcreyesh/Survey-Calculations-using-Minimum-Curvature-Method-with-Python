@@ -127,7 +127,7 @@ ax4.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
 ax4.set_ylabel('DLS (°/30 m)',weight='bold',labelpad=8)
 ax4.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 plt.tight_layout()
-# fig.title(Well)
+fig.title(Well)
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
@@ -165,6 +165,6 @@ def convert_csv(df):
     return df.to_csv(index=False).encode("utf-8")
 
 csv = convert_csv(df)
-sl.download_button(label="Download CSV", data=csv, file_name="Trajectory.csv", mime="text/csv")
+sl.download_button(label="Download CSV", data=csv, file_name=f"Trajectory_" + {Well} + ".csv", mime="text/csv")
 
 
