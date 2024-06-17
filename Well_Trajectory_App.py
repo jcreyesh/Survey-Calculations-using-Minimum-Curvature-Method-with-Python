@@ -137,6 +137,7 @@ fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 # fig.show()
 sl.plotly_chart(fig)
 
+sl.subheader("Trayectoria")
 # Exporting the dataframe
 sl.write(df)
 #sl.download_button(label="Download CSV", data=df)
