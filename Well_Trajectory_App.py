@@ -137,7 +137,7 @@ fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 # fig.show()
 sl.plotly_chart(fig)
 
-# EXporting the dataframe
-
+# Exporting the dataframe
+sl.write(df)
 
 
