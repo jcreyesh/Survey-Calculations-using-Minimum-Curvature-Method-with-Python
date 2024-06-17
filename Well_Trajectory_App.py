@@ -15,7 +15,7 @@ file = sl.file_uploader("Load the file")
 if file is not None:
     df = pd.read_csv(file)
     sl.write(df)
-
+sl.divider()
 Vs_plane = sl.number_input("Type the Vertical Section plane:")
 
 # Empty containers
