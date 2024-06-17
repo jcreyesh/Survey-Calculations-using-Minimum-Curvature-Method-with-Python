@@ -80,7 +80,7 @@ df['TVD'], df['NS'], df['EW'], df['VSEC'], df['DLS']  = TVD, NS, EW, Vs, DLS
 
 # Plotting
 # Create the figure
-fig, ax = plt.subplots(figsize=(7, 9), dpi=110)
+fig, ax = plt.subplots(figsize=(9, 9), dpi=110)
 ax.remove()
 plt.rcParams['axes.axisbelow'] = True
 
