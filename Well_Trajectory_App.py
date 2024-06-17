@@ -14,15 +14,15 @@ azimuth(°) & the Vertical Section plane(°).\nThe App computes columns such as 
 Northing vs Easting, inclination & DLS plots, as well as the 3D plot.\nFinally, you can retrieve the complete trajectory as a csv file by clicking\n\
 the Download button.")
 
-sl.divider()
+#sl.divider()
 
 file = sl.file_uploader("Load the file")
 if file is not None:
     df = pd.read_csv(file)
     sl.write(df)
-sl.divider()
+# sl.divider()
 Vs_plane = sl.number_input("Type the Vertical Section plane:")
-sl.divider()
+# sl.divider()
 
 # Empty containers
 DLS, TVD, NS, EW, Vs = np.array([0]), np.array([0]), np.array([0]), np.array([0]), np.array([0])
