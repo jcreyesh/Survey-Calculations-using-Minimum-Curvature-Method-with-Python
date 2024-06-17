@@ -13,7 +13,7 @@ sl.title("Wellbore Trajectory")
 file = sl.file_uploader("Load the file")
 if file is not None:
     df = pd.read_csv(file)
-    # sl.write(df)
+    sl.write(df)
 
 Vs_plane = sl.number_input("Type the Vertical Section plane:")
 
@@ -136,3 +136,8 @@ fig.update_layout(width=600, height=900)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 # fig.show()
 sl.plotly_chart(fig)
+
+# EXporting the dataframe
+
+
+
