@@ -110,7 +110,7 @@ ax3.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
 ax3.set_ylabel('Inc (°)',weight='bold', labelpad=8)
 ax3.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 
-# #Axes_4: DLS-depth
+# Axes_4: DLS-depth
 ax4 = plt.subplot2grid(shape=(3,2),loc=(2,1))
 ax4.plot(df['MD'],df['DLS'],color='blue')
 ax4.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
@@ -125,7 +125,8 @@ sl.subheader("3D-Plot")
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
 fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
-range_x=[-200,600],range_y=[-600,300],range_z=[5000,0],)
+range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0],)
+#range_x=[-200,600],range_y=[-600,300],range_z=[5000,0],)
 
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
@@ -140,7 +141,7 @@ sl.plotly_chart(fig)
 # displaying the 4 precision numbers
 pd.set_option("display.precision", 2)
 
-sl.subheader("Trayectoria")
+sl.subheader("Final Trajectory")
 # Exporting the dataframe
 sl.write(df)
 
