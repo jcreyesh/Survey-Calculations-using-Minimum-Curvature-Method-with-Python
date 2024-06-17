@@ -164,6 +164,6 @@ def convert_csv(df):
     return df.to_csv(index=False).encode("utf-8")
 
 csv = convert_csv(df)
-sl.download_button(label="Download CSV", data=csv, file_name=f"{Well} + ".csv", mime="text/csv")
+sl.download_button(label="Download CSV", data=csv, file_name="Trajectory_" + f"{Well}" + ".csv" mime="text/csv")
 
 
