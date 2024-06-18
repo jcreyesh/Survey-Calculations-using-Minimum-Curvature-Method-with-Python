@@ -137,25 +137,24 @@ sl.subheader("3D-Plot")
 sl.text("Y-axis")
 
 # low_y, up_y, step = min(df["NS"]), max(df["NS"]), 200
-col3, col4, col5 = sl.columns([1, 1, 1])
-with col3: 
-    low_y = sl.number_input("Begin:", value=None)
-with col4:
-    up_y = sl.number_input("End:", value=None)
-with col5:
-    step_y = sl.number_input("Step:", value=None)
-sl.write(low_y, up_y, step_y)
+# col3, col4, col5 = sl.columns([1, 1, 1])
+# with col3: 
+#     low_y = sl.number_input("Begin:", value=None)
+# with col4:
+#     up_y = sl.number_input("End:", value=None)
+# with col5:
+#     step_y = sl.number_input("Step:", value=None)
+# sl.write(low_y, up_y, step_y)
 
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
 fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
 range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
 
-low_y, up_y, step = min(y), max(y), 200
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
 xaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
-yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)',tickmode="linear", dtick=200))),
+yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)', tickmode="linear", dtick=200))),
 zaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
 fig.update_layout(width=400, height=600)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
