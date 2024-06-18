@@ -155,7 +155,7 @@ with sl.align('right'):
     zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_z)))
     fig.update_layout(width=400, height=600)
     fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
-    sl.plotly_chart(fig)
+    sl.plotly_chart(fig, use_container_width=True)
 
 # displaying the 4 precision numbers
 pd.set_option("display.precision", 2)
