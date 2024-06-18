@@ -142,7 +142,7 @@ with col4:
     up_y = sl.number_input("End:")
 with col5:
     step_y = sl.number_input("Step:")
-
+sl.write(low_y, up_y, step_y)
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
 fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
