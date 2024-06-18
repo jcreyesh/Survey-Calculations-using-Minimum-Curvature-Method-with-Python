@@ -18,7 +18,7 @@ the Download button.")
 
 #sl.divider()
 
-file = sl.file_uploader("Load the file")
+file = sl.file_uploader("Load the CSV file. The file must contain a header with MD, INC and AZI columns.")
 if file is not None:
     df = pd.read_csv(file)
     sl.write(df)
