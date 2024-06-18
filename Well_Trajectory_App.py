@@ -134,7 +134,7 @@ sl.subheader("3D-Plot")
 
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
-fig = px.line_3d(df,x,y,z, title=Well, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
+fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
 range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
 
 fig.update_traces(line={'width':4,'color':'blue'})
@@ -142,7 +142,7 @@ fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7,
 xaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
 yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)',),
 zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
-fig.update_layout(width=400, height=600)
+fig.update_layout(width=400, height=600, title=Well)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 
 sl.plotly_chart(fig)
