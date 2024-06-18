@@ -144,7 +144,7 @@ with col5:
    
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
-fig = px.line_3d(df,x,y,z, labels={'NS':'Northing','EW':'Easting','VD':'TVD'},
+fig = px.line_3d(df,x,y,z, labels={'NS':'NS','EW':'EW','VD':'TVD'},
 range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
 
 fig.update_traces(line={'width':4,'color':'blue'})
