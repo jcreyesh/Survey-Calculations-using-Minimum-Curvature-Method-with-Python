@@ -143,7 +143,7 @@ with col5:
     dtick_z = sl.number_input("TVD_ticks:", value=None)
    
 # 3D plot
-with sl.align("center"):
+with sl.align('right'):
     x = df['EW']; y = df['NS']; z = df['TVD']
     fig = px.line_3d(df,x,y,z, labels={'NS':'NS','EW':'EW','VD':'TVD'},
     range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
