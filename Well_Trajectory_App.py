@@ -177,6 +177,6 @@ try:
  sl.download_button(label="Download CSV", data=csv, file_name="Trajectory_" + f"{Well}" + ".csv", mime="text/csv")
 
 except:
- sl.write("Load a file.")
+ sl.write("Please, load a file.")
  pass
 
