@@ -135,6 +135,8 @@ sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
 sl.text("Y-axis")
+
+low_y, up_y, step = min(df["NS"]), max(df["NS"]), 200
 col3, col4, col5 = sl.columns([1, 1, 1])
 with col3: 
     low_y = sl.number_input("Begin:", value=None)
