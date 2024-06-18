@@ -136,11 +136,11 @@ sl.pyplot(fig)
 sl.subheader("3D-Plot")
 col3, col4, col5 = sl.columns([1, 1, 1])
 with col3: 
-    dtick_x = sl.number_input("x_tick:", value=None)
+    dtick_x = sl.number_input("EW_ticks:", value=None)
 with col4:
-    dtick_y = sl.number_input("y_tick:", value=None)
+    dtick_y = sl.number_input("NS_ticks:", value=None)
 with col5:
-    dtick_z = sl.number_input("z_tick:", value=None)
+    dtick_z = sl.number_input("TVD_ticks:", value=None)
    
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
