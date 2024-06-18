@@ -134,8 +134,6 @@ fig.suptitle(Well, fontweight="bold", y=1.02)
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
-sl.text("Y-axis")
-
 col3, col4, col5 = sl.columns([1, 1, 1])
 with col3: 
     dtick_x = sl.number_input("x_tick:", value=None)
