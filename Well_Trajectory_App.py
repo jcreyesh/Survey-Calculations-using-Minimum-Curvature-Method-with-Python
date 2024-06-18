@@ -27,7 +27,7 @@ col1, col2 = sl.columns([1, 1])
 with col1: 
     Well = sl.text_input("Well:")
 with col2:
-    Vs_plane = sl.number_input("Vertical Section plane:")
+    Vs_plane = sl.number_input("Vertical Section plane Azimuth:")
 
 # Empty containers
 DLS, TVD, NS, EW, Vs = np.array([0]), np.array([0]), np.array([0]), np.array([0]), np.array([0])
