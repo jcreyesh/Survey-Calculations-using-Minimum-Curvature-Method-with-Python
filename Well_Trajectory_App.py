@@ -143,19 +143,18 @@ with col5:
     dtick_z = sl.number_input("TVD_ticks:", value=None)
    
 # 3D plot
-with sl.align('right'):
-    x = df['EW']; y = df['NS']; z = df['TVD']
-    fig = px.line_3d(df,x,y,z, labels={'NS':'NS','EW':'EW','VD':'TVD'},
-    range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
+x = df['EW']; y = df['NS']; z = df['TVD']
+fig = px.line_3d(df,x,y,z, labels={'NS':'NS','EW':'EW','VD':'TVD'},
+range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
     
-    fig.update_traces(line={'width':4,'color':'blue'})
-    fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
-    xaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_x),
-    yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_y),
-    zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_z)))
-    fig.update_layout(width=400, height=600)
-    fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
-    sl.plotly_chart(fig, use_container_width=True)
+fig.update_traces(line={'width':4,'color':'blue'})
+fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
+xaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_x),
+yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_y),
+zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_z)))
+fig.update_layout(width=400, height=600)
+fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
+sl.plotly_chart(fig, use_container_width=True)
 
 # displaying the 4 precision numbers
 pd.set_option("display.precision", 2)
