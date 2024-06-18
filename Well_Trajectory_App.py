@@ -10,12 +10,12 @@ import altair as alt
 sl.image("wt_app_2.jpg")
 
 # Theme option
-if sl.toggle("Dark Mode", value=True) is False:
-      sl._config.set_option(f'theme.base', "light")
-else:
+if sl.toggle("Dark Mode", value=True) is True:
       sl._config.set_option(f'theme.base', "dark")
-if sl.button("Refresh"):
-      sl.rerun()
+# else:
+#       sl._config.set_option(f'theme.base', "dark")
+# if sl.button("Refresh"):
+#       sl.rerun()
 
 # Sidebar
 sl.title("Well Trajectory Calculations App - Minimum Curvature Method")
