@@ -8,7 +8,7 @@ from numpy import sin, cos, tan, arccos, arctan, deg2rad, rad2deg, sqrt
 import altair as alt
 
 # Image
-sl.image("WT_App.jpg")
+sl.image("wt_app_2.jpg")
 
 # Sidebar
 sl.title("Well Trajectory Calculations App - Minimum Curvature Method")
