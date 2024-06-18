@@ -100,7 +100,7 @@ plt.rcParams['axes.axisbelow'] = True
 # Axes_1: Vertical-Section
 ax1 = plt.subplot2grid(shape=(3,2), loc=(0,0), rowspan=3)
 ax1.plot(df['VSEC'], df['TVD'], color='blue')
-ax1.set_ylim(max(df["TVD"]) + 500, 0)
+ax1.set_ylim(round(max(df["TVD"]) + 1000, -3), 0)
 # ax1.set_xlim(-600, 600)
 ax1.set_xlabel(f'Vs (m) @ {Vs_plane}°',weight='bold', labelpad=8)
 ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
@@ -143,7 +143,7 @@ range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
 xaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
-yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)',),
+yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)',tickvals=list(range(begin,end,step))),
 zaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
 fig.update_layout(width=400, height=600)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
