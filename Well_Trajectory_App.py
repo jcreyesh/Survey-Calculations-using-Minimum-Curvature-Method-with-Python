@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -100,7 +99,8 @@ plt.rcParams['axes.axisbelow'] = True
 # Axes_1: Vertical-Section
 ax1 = plt.subplot2grid(shape=(3,2), loc=(0,0), rowspan=3)
 ax1.plot(df['VSEC'], df['TVD'], color='blue')
-ax1.set_ylim(round(max(df["TVD"]) + 1000, -3), 0)
+# td = round((max(df["TVD"]) + 1000), -3)
+ax1.set_ylim(round((max(df["TVD"]) + 1000), -3), 0)
 # ax1.set_xlim(-600, 600)
 ax1.set_xlabel(f'Vs (m) @ {Vs_plane}°',weight='bold', labelpad=8)
 ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
@@ -136,12 +136,14 @@ sl.pyplot(fig)
 sl.subheader("3D-Plot")
 sl.text("Y-axis")
 
-col3, col4 = sl.columns([1, 1])
+col3, col4, col5 = sl.columns([1, 1, 1])
 with col3: 
-    dtick_x = sl.number_input("Xtick:", value=None)
+    dtick_x = sl.number_input("x_tick:", value=None)
 with col4:
-    dtick_y = sl.number_input("Ytick:", value=None)
-
+    dtick_y = sl.number_input("y_tick:", value=None)
+with col5:
+    dtick_z = sl.number_input("z_tick:", value=None)
+   
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
 fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
@@ -151,7 +153,7 @@ fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
 xaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_x),
 yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_y),
-zaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
+zaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=dtick_z)))
 fig.update_layout(width=400, height=600)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 
