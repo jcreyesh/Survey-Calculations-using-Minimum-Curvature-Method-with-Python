@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 from numpy import sin, cos, tan, arccos, arctan, deg2rad, rad2deg, sqrt
 import altair as alt
 
+# Image
+sl.image("WT_App.jpg")
+
 # Sidebar
 sl.title("Well Trajectory Calculations App - Minimum Curvature Method")
 sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \ndata measure depth(md), inclination(°),\
@@ -142,7 +145,7 @@ fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7,
 xaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
 yaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)',),
 zaxis=dict(zeroline=False,tickfont={'size':12},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
-fig.update_layout(width=400, height=600, title=Well)
+fig.update_layout(width=400, height=600)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
 
 sl.plotly_chart(fig)
