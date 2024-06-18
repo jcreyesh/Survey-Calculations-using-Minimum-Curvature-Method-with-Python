@@ -144,8 +144,8 @@ with col5:
    
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
-fig = px.line_3d(df,x,y,z, labels={'NS':'N/S (m)','EW':'E/O (m)','VD':'TVD (m)'},
-range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[round((max(z) + 1000), -3), 0])
+fig = px.line_3d(df,x,y,z, labels={'NS':'N/S','EW':'E/W','VD':'TVD'},
+range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 1000, 0])
 
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
