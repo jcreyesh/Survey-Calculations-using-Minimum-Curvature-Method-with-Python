@@ -137,11 +137,11 @@ sl.subheader("3D-Plot")
 sl.text("Y-axis")
 col3, col4, col5 = sl.columns([1, 1, 1])
 with col3: 
-    low_y = sl.number_input("Begin:")
+    low_y = sl.number_input("Begin:", value=None)
 with col4:
-    up_y = sl.number_input("End:")
+    up_y = sl.number_input("End:", value=None)
 with col5:
-    step_y = sl.number_input("Step:")
+    step_y = sl.number_input("Step:", value=None)
 sl.write(low_y, up_y, step_y)
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
