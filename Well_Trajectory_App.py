@@ -11,7 +11,7 @@ sl.image("wt_app_2.jpg")
 
 # Sidebar
 sl.title("Well Trajectory Calculations App - Minimum Curvature Method")
-sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \ndata measure depth(md), inclination(°),\
+sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \ndata the measure depth(md), inclination(°),\
 azimuth(°) & the Vertical Section plane(°).\nThe App computes columns such as TVD, Northing, Easting, Vertical Section & DLS.\nDisplays the Vs,\
 Northing vs Easting, inclination & DLS plots, as well as the 3D plot.\nFinally, you can retrieve the complete trajectory as a csv file by clicking\n\
 the Download button.")
