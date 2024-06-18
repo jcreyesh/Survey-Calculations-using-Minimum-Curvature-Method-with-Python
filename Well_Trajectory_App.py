@@ -119,14 +119,14 @@ ax2.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 # #Axes_3: Inc-depth
 ax3 = plt.subplot2grid(shape=(3,2),loc=(1,1)) 
 ax3.plot(df['MD'],df['INC'],color='blue')
-ax3.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
+ax3.set_xlabel('Depth (md)',weight='bold', labelpad=8)
 ax3.set_ylabel('Inc (°)',weight='bold', labelpad=8)
 ax3.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 
 # Axes_4: DLS-depth
 ax4 = plt.subplot2grid(shape=(3,2),loc=(2,1))
 ax4.plot(df['MD'],df['DLS'],color='blue')
-ax4.set_xlabel('Profundidad (md)',weight='bold', labelpad=8)
+ax4.set_xlabel('Depth (md)',weight='bold', labelpad=8)
 ax4.set_ylabel('DLS (°/30 m)',weight='bold',labelpad=8)
 ax4.grid(c=(0.85,0.85,0.85), linestyle='dashed')
 plt.tight_layout()
@@ -134,6 +134,14 @@ fig.suptitle(Well, fontweight="bold", y=1.02)
 sl.pyplot(fig)
 
 sl.subheader("3D-Plot")
+sl.text("Y-axis")
+col3, col4, col5 = sl.columns([1, 1, 1])
+with col3: 
+    low_y = sl.number_input("Begin:")
+with col4:
+    up_y = sl.number_input("End:")
+with col5:
+    step_y = sl.number_input("Step:")
 
 # 3D plot
 x = df['EW']; y = df['NS']; z = df['TVD']
@@ -143,7 +151,7 @@ range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
 xaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
-yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)',tickvals=list(range(begin,end,step))),
+yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)',tickvals=list(range(low_y,up_y,step_y))),
 zaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
 fig.update_layout(width=400, height=600)
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
