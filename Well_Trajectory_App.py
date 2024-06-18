@@ -153,7 +153,7 @@ range_x=[min(x),max(x)],range_y=[min(y), max(y)],range_z=[max(z) + 500, 0])
 
 fig.update_traces(line={'width':4,'color':'blue'})
 fig.update_layout(scene=dict(aspectmode='manual', aspectratio=dict(x=0.7, y=0.7, z=2.1),
-xaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)'),
+xaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=200),
 yaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)', dtick=200),
 zaxis=dict(zeroline=False,tickfont={'size':11.5},backgroundcolor='white',gridcolor='rgb(222,222,222)')))
 fig.update_layout(width=400, height=600)
