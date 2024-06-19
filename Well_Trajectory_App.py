@@ -15,7 +15,7 @@ try:
  sl.text("This simple App helps you to obtain a complete wellbore-trajectory using as input \ndata the measure depth, inclination,\
   azimuth & the Vertical Section plane.The App\ncomputes columns such as TVD, Northing, Easting, Vertical Section & DLS. Displays \nthe Vs,\
   Northing vs Easting, inclination & DLS plots, as well as the 3D plot.\nFinally, you can retrieve the complete trajectory as a csv file by clicking\n\
- the Download button.")
+the Download button."\n Created by José Carlos Reyes.)
  
  #sl.divider()
  
