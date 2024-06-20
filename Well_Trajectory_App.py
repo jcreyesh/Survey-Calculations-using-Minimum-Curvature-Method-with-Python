@@ -26,7 +26,7 @@ the Download button.\nCreated by José Carlos Reyes.")
  
  col1, col2, col3 = sl.columns([1, 1, 1])
  with col1: 
-     Well = sl.text_input("Well:", placehilder="type a name.")
+     Well = sl.text_input("Well:", placeholder="type a name.")
  with col2:
      Vs_plane = sl.number_input("Vertical Section plane Azimuth:", placeholder="type a vertical section azimuth.")
  with col3:
