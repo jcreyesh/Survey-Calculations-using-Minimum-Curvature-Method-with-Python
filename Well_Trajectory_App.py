@@ -24,11 +24,13 @@ the Download button.\nCreated by José Carlos Reyes.")
      df = pd.read_csv(file)
      sl.write(df)
  
- col1, col2 = sl.columns([1, 1])
+ col1, col2, col3 = sl.columns([1, 1, 1])
  with col1: 
      Well = sl.text_input("Well:")
  with col2:
      Vs_plane = sl.number_input("Vertical Section plane Azimuth:")
+ with col3:
+   total_depth = sl.number_input("Total depth - TVD:") 
  
  # Empty containers
  DLS, TVD, NS, EW, Vs = np.array([0]), np.array([0]), np.array([0]), np.array([0]), np.array([0])
@@ -101,7 +103,8 @@ the Download button.\nCreated by José Carlos Reyes.")
  ax1 = plt.subplot2grid(shape=(3,2), loc=(0,0), rowspan=3)
  ax1.plot(df['VSEC'], df['TVD'], color='blue')
  # td = round((max(df["TVD"]) + 1000), -3)
- ax1.set_ylim(round((max(df["TVD"]) + 1000), -3), 0)
+ ax1.set_ylim(total_depth, 0)
+ # ax1.set_ylim(round((max(df["TVD"]) + 1000), -3), 0)
  # ax1.set_xlim(-600, 600)
  ax1.set_xlabel(f'Vs (m) @ {Vs_plane}°',weight='bold', labelpad=8)
  ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
