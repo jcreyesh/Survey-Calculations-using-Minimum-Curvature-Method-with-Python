@@ -30,7 +30,7 @@ the Download button.\nCreated by José Carlos Reyes.")
  with col2:
      Vs_plane = sl.number_input("Vertical Section plane Azimuth:")
  with col3:
-   total_depth = sl.number_input("Total depth - TVD:") 
+   total_depth = sl.number_input("Total depth - TVD:", value=5000) 
  
  # Empty containers
  DLS, TVD, NS, EW, Vs = np.array([0]), np.array([0]), np.array([0]), np.array([0]), np.array([0])
