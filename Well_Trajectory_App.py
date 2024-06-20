@@ -26,11 +26,11 @@ the Download button.\nCreated by José Carlos Reyes.")
  
  col1, col2, col3 = sl.columns([1, 1, 1])
  with col1: 
-     Well = sl.text_input("Well:")
+     Well = sl.text_input("Well:", placehilder="type a name.")
  with col2:
-     Vs_plane = sl.number_input("Vertical Section plane Azimuth:")
+     Vs_plane = sl.number_input("Vertical Section plane Azimuth:", placeholder="type a vertical section azimuth.")
  with col3:
-   total_depth = sl.number_input("Total depth - TVD:", value=5000) 
+   total_depth = sl.number_input("Total depth - TVD:", value=max(df["MD"]), placeholder="type a maximum vertical depth.") 
  
  # Empty containers
  DLS, TVD, NS, EW, Vs = np.array([0]), np.array([0]), np.array([0]), np.array([0]), np.array([0])
