@@ -108,8 +108,8 @@ the Download button.\nCreated by José Carlos Reyes.")
  ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
  ax1.xaxis.set_minor_locator(AutoMinorLocator(10))
  ax1.yaxis.set_minor_locator(AutoMinorLocator(20))
- ax1.grid(c="#FFCC66", alpha=0.5)
- ax1.grid(which="minor", color="#FFCC66", alpha=0.5)
+ ax1.grid(c="#FFCC66", alpha=0.4)
+ ax1.grid(which="minor", color="#FFCC66", alpha=0.4)
 
  # Axes_2: Plan-View
  ax2 = plt.subplot2grid(shape=(3,2),loc=(0,1)) 
