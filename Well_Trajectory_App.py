@@ -108,7 +108,7 @@ the Download button.\nCreated by José Carlos Reyes.")
  ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
  ax1.xaxis.set_minor_locator(AutoMinorLocator(10))
  ax1.yaxis.set_minor_locator(AutoMinorLocator(10))
- ax1.grid(c="#FFCC66"
+ ax1.grid(c="#FFCC66")
  ax1.grid(which="minor", color="#FFCC66")
 
  # Axes_2: Plan-View
