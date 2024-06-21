@@ -94,6 +94,7 @@ the Download button.\nCreated by José Carlos Reyes.")
  df['TVD'], df['NS'], df['EW'], df['VSEC'], df['DLS']  = TVD, NS, EW, Vs, DLS
  
  # Plotting
+ from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
  # Create the figure
  fig, ax = plt.subplots(figsize=(8, 8), dpi=105)
  ax.remove()
@@ -102,15 +103,14 @@ the Download button.\nCreated by José Carlos Reyes.")
  # Axes_1: Vertical-Section
  ax1 = plt.subplot2grid(shape=(3,2), loc=(0,0), rowspan=3)
  ax1.plot(df['VSEC'], df['TVD'], color='blue')
- # td = round((max(df["TVD"]) + 1000), -3)
  ax1.set_ylim(total_depth, 0)
- # ax1.set_ylim(round((max(df["TVD"]) + 1000), -3), 0)
- # ax1.set_xlim(-600, 600)
  ax1.set_xlabel(f'Vs (m) @ {Vs_plane}°',weight='bold', labelpad=8)
  ax1.set_ylabel('TVD (m)',weight='bold', labelpad=8)
- # ax1.set_yticks([i for i in range(0,5500,500)])
- ax1.grid(c=(0.85,0.85,0.85), linestyle='dashed')
- 
+ ax1.xaxis.set_minor_locator(AutoMinorLocator(10))
+ ax1.yaxis.set_minor_locator(AutoMinorLocator(10))
+ ax1.grid(c=(0.85,0.85,0.85))
+ ax1.grid(which="minor", color=(0.85, 0.85, 0.85))
+
  # Axes_2: Plan-View
  ax2 = plt.subplot2grid(shape=(3,2),loc=(0,1)) 
  ax2.plot(df['EW'],df['NS'],color='blue')
