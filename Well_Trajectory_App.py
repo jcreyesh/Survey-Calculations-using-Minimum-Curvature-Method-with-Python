@@ -182,7 +182,7 @@ the Download button.\nCreated by José Carlos Reyes & Mario Alberto Vásquez.")
  df = df.apply(lambda col: round(col, 4))
                
  # Download Button
- # @sl.cache_resource
+ @sl.cache_data
  def convert_csv(df):
      return df.to_csv(index=False).encode("utf-8")
  
